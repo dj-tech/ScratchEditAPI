@@ -251,7 +251,10 @@ def getpassword(title='Enter Password', prompt=['Enter Username', 'Enter Passwor
     global tk
     tk = tkinter.Tk()
     tk.title(title)
-    tk.attributes('-toolwindow', 1)
+    try:
+        tk.attributes('-toolwindow', 1)
+    except:
+        pass
     tk.iconify()
     tk.update_idletasks()
     tk.deiconify()
